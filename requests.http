@@ -1,0 +1,123 @@
+### Banking API - Test Requests
+### Use with IntelliJ HTTP Client, VS Code REST Client, or copy as curl
+
+@baseUrl = http://localhost:8080
+
+### ─── ACCOUNTS ─────────────────────────────────────────────────
+
+### Create account with initial balance
+POST {{baseUrl}}/accounts
+Content-Type: application/json
+
+{
+  "holderName": "Arthur Oliveira",
+  "document": "123.456.789-00",
+  "accountNumber": "0001-1",
+  "initialBalance": 2500.00
+}
+
+---
+
+### Create second account (no initial balance)
+POST {{baseUrl}}/accounts
+Content-Type: application/json
+
+{
+  "holderName": "Arthur Apolonio",
+  "document": "987.654.321-00",
+  "accountNumber": "0002-1"
+}
+
+---
+
+### List all accounts
+GET {{baseUrl}}/accounts
+
+---
+
+### Get account by ID
+GET {{baseUrl}}/accounts/1
+
+---
+
+### Get non-existent account (404)
+GET {{baseUrl}}/accounts/999
+
+---
+
+### ─── TRANSACTIONS ────────────────────────────────────────────
+
+### Deposit into account
+POST {{baseUrl}}/accounts/1/deposit
+Content-Type: application/json
+
+{
+  "amount": 500.00
+}
+
+---
+
+### Withdraw from account
+POST {{baseUrl}}/accounts/1/withdraw
+Content-Type: application/json
+
+{
+  "amount": 200.00
+}
+
+---
+
+### Withdraw more than balance (422)
+POST {{baseUrl}}/accounts/1/withdraw
+Content-Type: application/json
+
+{
+  "amount": 999999.00
+}
+
+---
+
+### Deposit with zero amount (400)
+POST {{baseUrl}}/accounts/1/deposit
+Content-Type: application/json
+
+{
+  "amount": 0
+}
+
+---
+
+### Deposit with negative amount (400)
+POST {{baseUrl}}/accounts/1/deposit
+Content-Type: application/json
+
+{
+  "amount": -50.00
+}
+
+---
+
+### Get transaction history
+GET {{baseUrl}}/accounts/1/transactions
+
+---
+
+### ─── VALIDATION ERRORS ────────────────────────────────────────
+
+### Missing required fields (400)
+POST {{baseUrl}}/accounts
+Content-Type: application/json
+
+{}
+
+---
+
+### Duplicate document (409)
+POST {{baseUrl}}/accounts
+Content-Type: application/json
+
+{
+  "holderName": "Another Person",
+  "document": "123.456.789-00",
+  "accountNumber": "0003-1"
+}
