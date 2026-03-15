@@ -198,4 +198,4 @@ After starting the application, the Swagger UI can be accessed at:
 
 http://localhost:8080/swagger-ui/index.html
 
-<img src="docs/swagger-ui.png" alt="Swagger UI" width="900"/>
+![Swagger UI](https://raw.githubusercontent.com/ArthurOliveira-eng/banking-rest-api/main/docs/swagger-ui.png)
