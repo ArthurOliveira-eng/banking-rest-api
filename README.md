@@ -102,7 +102,7 @@ Content-Type: application/json
   "holderName": "Arthur Oliveira",
   "document": "123.456.789-00",
   "accountNumber": "0001-1",
-  "initialBalance": 1000.00
+  "initialBalance": 2500.00
 }
 
 Example response:
