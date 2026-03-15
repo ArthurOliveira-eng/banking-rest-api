@@ -9,12 +9,12 @@ This project was developed as a backend practice project to explore REST API dev
 
 ## Technologies
 
-- Java 17+
-- Spring Boot
+![Java](https://img.shields.io/badge/Java-17-orange)
+![Spring Boot](https://img.shields.io/badge/SpringBoot-3.x-green)
 - Spring Data JPA / Hibernate
-- MySQL
+![MySQL](https://img.shields.io/badge/MySQL-8-blue)
 - Maven
-- Docker / Docker Compose
+![Docker](https://img.shields.io/badge/Docker-ready-blue)
 - Lombok
 
 
