@@ -52,7 +52,7 @@ src/main/java/com/banking/
 
 ## Running Locally
 
-**Prerequisites**
+**Pre-requisites**
 
 - Java 17+
 - Maven
