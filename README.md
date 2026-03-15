@@ -189,3 +189,13 @@ Integration tests with Testcontainers
 Audit trail with Spring Data Envers
 
 Rate limiting on transaction endpoints
+
+## API Documentation
+
+Swagger UI available at:
+
+After starting the application, the Swagger UI can be accessed at:
+
+http://localhost:8080/swagger-ui/index.html
+
+![Swagger UI](docs/swagger-ui.png)
