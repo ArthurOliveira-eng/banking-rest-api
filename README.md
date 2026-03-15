@@ -11,13 +11,19 @@ The application allows creating accounts, performing deposits and withdrawals, a
 
 This project was developed as a backend practice project to explore REST API development, database modeling and service-layer architecture using Spring Boot.
 
+## Preview
+
+![Swagger UI](docs/swagger-ui.png)
 
 ## Technologies
 
+- Java 17
+- Spring Boot 3.2
 - Spring Data JPA / Hibernate
+- MySQL 8
+- Docker + Docker Compose
 - Maven
 - Lombok
-
 
 ## Project Structure
 
@@ -60,26 +66,31 @@ src/main/java/com/banking/
 
 Create the database:
 
-bash
-
+```bash
 mysql -u root -p -e "CREATE DATABASE banking_db;"
+```
 
+Clone the repository and run:
 
-## Clone the repository and run the application:
-
-git clone <repo-url>
-cd banking-api
+```bash
+git clone https://github.com/ArthurOliveira-eng/banking-rest-api.git
+cd banking-rest-api
 mvn spring-boot:run
-(The API will start at: http://localhost:8080 and http://localhost:8080/accounts)
+```
+
+The API will start at `http://localhost:8080`.
 
 ## Running with Docker
 
-Start the containers:
+```bash
 docker-compose up --build
+```
 
 Stop containers and remove volumes:
-docker-compose down -v
 
+```bash
+docker-compose down -v
+```
 
 ## API Endpoints
 
@@ -92,11 +103,11 @@ docker-compose down -v
 | POST   | `/accounts/{id}/withdraw`     | Withdraw from an account |
 | GET    | `/accounts/{id}/transactions` | Get transaction history  |
 
+## Request and Response Examples
 
-## Request and Response Example
+**Create Account:**
 
-Create Account:
-
+```bash
 POST /accounts
 Content-Type: application/json
 
@@ -106,8 +117,11 @@ Content-Type: application/json
   "accountNumber": "0001-1",
   "initialBalance": 2500.00
 }
+```
 
-Example response:
+**Response:**
+
+```json
 {
   "success": true,
   "message": "Account created successfully",
@@ -121,43 +135,36 @@ Example response:
   },
   "timestamp": "2026-03-10T10:00:00"
 }
+```
 
-# Deposit
+**Deposit:**
 
+```bash
 POST /accounts/1/deposit
 Content-Type: application/json
 
-{
-  "amount": 500.00
-}
+{ "amount": 500.00 }
+```
 
+**Withdraw:**
 
-# Withdraw
-
+```bash
 POST /accounts/1/withdraw
 Content-Type: application/json
 
-{
-  "amount": 200.00
-}
+{ "amount": 200.00 }
+```
 
+## Business Rules
 
-# Business Rules
-
-- document and accountNumber must be unique
-
-- initialBalance defaults to 0 if not provided
-
-- Deposit and withdrawal amounts must be greater than 0
-
-- Withdrawals fail if the balance is insufficient (422 Unprocessable Entity)
-
-- Monetary values use BigDecimal for precision
-
+- `document` and `accountNumber` must be unique
+- `initialBalance` defaults to `0` if not provided
+- Deposit and withdrawal amounts must be greater than `0`
+- Withdrawals fail if the balance is insufficient (`422 Unprocessable Entity`)
+- Monetary values use `BigDecimal` for precision
 - Transaction history is returned in reverse chronological order
 
-
-# HTTP Status Codes
+## HTTP Status Codes
 
 | Code | Meaning                              |
 | ---- | ------------------------------------ |
@@ -169,35 +176,25 @@ Content-Type: application/json
 | 422  | Insufficient balance                 |
 | 500  | Unexpected server error              |
 
+## Running Tests
 
-# Running Tests
-
+```bash
 mvn test
-
-
-## Possible Improvements
-
-JWT authentication and authorization
-
-Transfer between accounts
-
-Pagination for transaction history
-
-API documentation with Swagger / OpenAPI
-
-Integration tests with Testcontainers
-
-Audit trail with Spring Data Envers
-
-Rate limiting on transaction endpoints
+```
 
 ## API Documentation
 
-After starting the application Swagger UI is available at:
+After starting the application, Swagger UI is available at:
 
+```
 http://localhost:8080/swagger-ui/index.html
+```
 
-## Preview
+## Possible Improvements
 
-![Swagger UI](docs/swagger-ui.png)
-
+- JWT authentication and authorization
+- Transfer between accounts
+- Pagination for transaction history
+- Integration tests with Testcontainers
+- Audit trail with Spring Data Envers
+- Rate limiting on transaction endpoints
