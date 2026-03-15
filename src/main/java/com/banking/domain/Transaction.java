@@ -31,7 +31,7 @@ public class Transaction {
     @Column(nullable = false)
     private LocalDateTime timestamp;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "account_id", nullable = false)
     private Account account;
 
