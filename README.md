@@ -115,9 +115,9 @@ Example response:
     "document": "123.456.789-00",
     "accountNumber": "0001-1",
     "balance": 2500.00,
-    "createdAt": "2024-05-01T10:00:00"
+    "createdAt": "2026-03-10T10:00:00"
   },
-  "timestamp": "2024-05-01T10:00:00"
+  "timestamp": "2026-03-10T10:00:00"
 }
 
 # Deposit
