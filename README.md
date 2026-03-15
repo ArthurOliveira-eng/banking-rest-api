@@ -47,6 +47,7 @@ src/main/java/com/banking/
     ├── DuplicateAccountException.java
     ├── InsufficientBalanceException.java
     └── GlobalExceptionHandler.java
+```
 
 ## Running Locally
 
