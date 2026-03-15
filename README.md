@@ -60,7 +60,8 @@ src/main/java/com/banking/
 
 Create the database:
 
-```bash
+bash
+
 mysql -u root -p -e "CREATE DATABASE banking_db;"
 
 
@@ -196,7 +197,7 @@ After starting the application Swagger UI is available at:
 
 http://localhost:8080/swagger-ui/index.html
 
-## Preview
+```## Preview
 
 ![Swagger UI](docs/swagger-ui.png)
 ```
