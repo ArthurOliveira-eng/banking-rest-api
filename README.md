@@ -192,10 +192,9 @@ Rate limiting on transaction endpoints
 
 ## API Documentation
 
-Swagger UI available at:
-
-After starting the application, the Swagger UI can be accessed at:
+After starting the application Swagger UI is available at:
 
 http://localhost:8080/swagger-ui/index.html
 
 ![Swagger UI](https://raw.githubusercontent.com/ArthurOliveira-eng/banking-rest-api/main/docs/swagger-ui.png)
+
