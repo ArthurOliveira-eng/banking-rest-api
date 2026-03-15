@@ -3,7 +3,7 @@
 
 @baseUrl = http://localhost:8080
 
-### ─── ACCOUNTS ─────────────────────────────────────────────────
+### ACCOUNTS 
 
 ### Create account with initial balance
 POST {{baseUrl}}/accounts
@@ -45,7 +45,7 @@ GET {{baseUrl}}/accounts/999
 
 ---
 
-### ─── TRANSACTIONS ────────────────────────────────────────────
+### TRANSACTIONS
 
 ### Deposit into account
 POST {{baseUrl}}/accounts/1/deposit
@@ -102,7 +102,7 @@ GET {{baseUrl}}/accounts/1/transactions
 
 ---
 
-### ─── VALIDATION ERRORS ────────────────────────────────────────
+### VALIDATION ERRORS
 
 ### Missing required fields (400)
 POST {{baseUrl}}/accounts
