@@ -1,5 +1,10 @@
 # Banking API
 
+![Java](https://img.shields.io/badge/Java-17-orange)
+![Spring Boot](https://img.shields.io/badge/SpringBoot-3.x-green)
+![MySQL](https://img.shields.io/badge/MySQL-8-blue)
+![Docker](https://img.shields.io/badge/Docker-ready-blue)
+
 REST API for basic banking operations built with **Java, Spring Boot and MySQL**.
 
 The application allows creating accounts, performing deposits and withdrawals, and viewing the transaction history of each account.
@@ -9,12 +14,8 @@ This project was developed as a backend practice project to explore REST API dev
 
 ## Technologies
 
-![Java](https://img.shields.io/badge/Java-17-orange)
-![Spring Boot](https://img.shields.io/badge/SpringBoot-3.x-green)
 - Spring Data JPA / Hibernate
-![MySQL](https://img.shields.io/badge/MySQL-8-blue)
 - Maven
-![Docker](https://img.shields.io/badge/Docker-ready-blue)
 - Lombok
 
 
