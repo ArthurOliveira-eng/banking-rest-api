@@ -11,3 +11,7 @@ target/
 *.log
 
 .DS_Store
+
+node_modules/
+mvnw
+mvnw.cmd
