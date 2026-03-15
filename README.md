@@ -20,33 +20,33 @@ This project was developed as a backend practice project to explore REST API dev
 
 ## Project Structure
 
+```text
 src/main/java/com/banking/
 ├── BankingApiApplication.java
 ├── controller/
-│ └── AccountController.java
+│   └── AccountController.java
 ├── service/
-│ └── AccountService.java
+│   └── AccountService.java
 ├── domain/
-│ ├── Account.java
-│ ├── Transaction.java
-│ └── TransactionType.java
+│   ├── Account.java
+│   ├── Transaction.java
+│   └── TransactionType.java
 ├── repository/
-│ ├── AccountRepository.java
-│ └── TransactionRepository.java
+│   ├── AccountRepository.java
+│   └── TransactionRepository.java
 ├── dto/
-│ ├── request/
-│ │ ├── CreateAccountRequest.java
-│ │ └── TransactionRequest.java
-│ └── response/
-│ ├── AccountResponse.java
-│ ├── TransactionResponse.java
-│ └── ApiResponse.java
+│   ├── request/
+│   │   ├── CreateAccountRequest.java
+│   │   └── TransactionRequest.java
+│   └── response/
+│       ├── AccountResponse.java
+│       ├── TransactionResponse.java
+│       └── ApiResponse.java
 └── exception/
-├── AccountNotFoundException.java
-├── DuplicateAccountException.java
-├── InsufficientBalanceException.java
-└── GlobalExceptionHandler.java
-
+    ├── AccountNotFoundException.java
+    ├── DuplicateAccountException.java
+    ├── InsufficientBalanceException.java
+    └── GlobalExceptionHandler.java
 
 ## Running Locally
 
