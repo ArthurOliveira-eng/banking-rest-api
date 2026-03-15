@@ -199,3 +199,4 @@ http://localhost:8080/swagger-ui/index.html
 ## Preview
 
 ![Swagger UI](docs/swagger-ui.png)
+```
