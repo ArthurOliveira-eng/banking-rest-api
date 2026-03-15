@@ -198,4 +198,4 @@ After starting the application, the Swagger UI can be accessed at:
 
 http://localhost:8080/swagger-ui/index.html
 
-![Swagger UI](docs/swagger-ui.png)
+<img src="docs/swagger-ui.png" alt="Swagger UI" width="900"/>
