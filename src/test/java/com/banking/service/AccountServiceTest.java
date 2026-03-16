@@ -46,7 +46,7 @@ class AccountServiceTest {
     void setUp() {
         account = Account.builder()
                 .id(1L)
-                .holderName("Jane Doe")
+                .holderName("Arthur Oliveira")
                 .document("123.456.789-00")
                 .accountNumber("0001-1")
                 .balance(new BigDecimal("500.00"))
