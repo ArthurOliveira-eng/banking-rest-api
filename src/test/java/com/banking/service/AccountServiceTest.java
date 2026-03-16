@@ -57,7 +57,7 @@ class AccountServiceTest {
     @Test
     void createAccount_success() {
         CreateAccountRequest request = new CreateAccountRequest();
-        request.setHolderName("Jane Doe");
+        request.setHolderName("Arthur Oliveira");
         request.setDocument("123.456.789-00");
         request.setAccountNumber("0001-1");
         request.setInitialBalance(BigDecimal.ZERO);
@@ -76,7 +76,7 @@ class AccountServiceTest {
     @Test
     void createAccount_duplicateDocument_throws() {
         CreateAccountRequest request = new CreateAccountRequest();
-        request.setHolderName("Jane Doe");
+        request.setHolderName("Arthur Oliveira");
         request.setDocument("123.456.789-00");
         request.setAccountNumber("0001-1");
         request.setInitialBalance(BigDecimal.ZERO);
@@ -91,7 +91,7 @@ class AccountServiceTest {
     @Test
     void createAccount_duplicateAccountNumber_throws() {
         CreateAccountRequest request = new CreateAccountRequest();
-        request.setHolderName("Jane Doe");
+        request.setHolderName("Arthur Oliveira");
         request.setDocument("123.456.789-00");
         request.setAccountNumber("0001-1");
         request.setInitialBalance(BigDecimal.ZERO);
