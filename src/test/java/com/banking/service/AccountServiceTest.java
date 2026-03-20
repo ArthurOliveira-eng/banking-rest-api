@@ -68,7 +68,7 @@ class AccountServiceTest {
 
         AccountResponse response = accountService.createAccount(request);
 
-        assertThat(response.getHolderName()).isEqualTo("Jane Doe");
+        assertThat(response.getHolderName()).isEqualTo("Arthur Oliveira");
         assertThat(response.getAccountNumber()).isEqualTo("0001-1");
         verify(accountRepository, times(1)).save(any());
     }
